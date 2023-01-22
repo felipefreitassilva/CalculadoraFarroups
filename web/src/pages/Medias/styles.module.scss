@@ -1,0 +1,89 @@
+@use '../styles/colors';
+
+.inputWrapper {
+	width: '100%';
+	margin-top: 30px;
+}
+
+.input {
+	margin-bottom: 25px;
+	align-items: 'center';
+	flex-direction: 'row';
+	justify-content: 'space-around';
+}
+
+.label {
+	font-size: 18px;
+	color: colors.$white;
+}
+
+.textInput {
+	width: 42px;
+	height: 42px;
+	font-size: 18px;
+	text-align: 'center';
+	color: colors.$white;
+	border-width: 2.5px;
+	border-radius: 2px;
+	border-color: colors.$primary;
+}
+
+.wrapperNotaAlvo {
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	align-items: 'center';
+	justify-content: 'center';
+	border-width: 5px;
+	border-radius: 25px;
+	border-color: colors.$primary;
+}
+
+.notaAlvo {
+	font-size: 38px;
+	color: colors.$white;
+}
+
+.fraseFinal {
+	margin-top: 12px;
+	color: colors.$white;
+}
+
+.container {
+	flex: 1;
+	padding: 20px;
+	background-color: colors.$secondary;
+}
+
+.container {
+	flex: 1;
+	padding: 20px;
+	background-color: colors.$secondary;
+}
+
+.textWelcome {
+	font-size: 16px;
+	text-align: 'justify';
+	padding: 10px 0;
+	color: colors.$white;
+}
+
+.buttons {
+	flex: 1;
+	align-items: 'center';
+}
+
+.button {
+	height: 54px;
+	width: '85%';
+	border-radius: 80px;
+	margin-top: 30px;
+	align-items: 'center';
+	justify-content: 'center';
+	background-color: colors.$primary;
+}
+
+.textButton {
+	font-size: 24px;
+	color: colors.$white;
+}
