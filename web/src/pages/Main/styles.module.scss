@@ -32,3 +32,16 @@
 	font-size: 24px;
 	color: colors.$white;
 }
+
+.appButton {
+	position: fixed;
+	$imgSize: 200px;
+	$distanceFromCorner: 22px;
+	left: $distanceFromCorner;
+	bottom: $distanceFromCorner;
+	width: $imgSize;
+
+	img {
+		width: 100%;
+	}
+}

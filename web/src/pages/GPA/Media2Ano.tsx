@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Title from '../components/Title'
-import Voltar from '../components/Voltar'
+import Title from '../../components/Title'
+import Voltar from '../../components/Voltar'
 import styles from './styles.module.scss'
 
 export default function media2ano() {

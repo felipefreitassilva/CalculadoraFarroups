@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './styles.module.scss'
-import Title from '../../components/Title'
-import Voltar from '../../components/Voltar'
+import Title from '../../../components/Title'
+import Voltar from '../../../components/Voltar'
 
 export default function Gpafinal() {
 	const navigate = useNavigate()

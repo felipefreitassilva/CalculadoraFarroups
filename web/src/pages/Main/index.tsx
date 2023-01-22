@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import Title from '../../components/Title'
 import styles from './styles.module.scss'
+import getItOnGooglePlay from '../../../public/getItOnGooglePlay.png'
+import Title from '../../components/Title'
 
 export default function Main() {
 	const navigate = useNavigate()
@@ -39,6 +40,16 @@ export default function Main() {
 					<h2 className={styles.textButton}>GPA</h2>
 				</button>
 			</div>
+			<a
+				className={styles.appButton}
+				href='https://play.google.com/store/apps/details?id=com.outdevs.calculadorafarroups&pli=1'
+				target='_blank'
+			>
+				<img
+					src={getItOnGooglePlay}
+					alt='Baixe o App na Play Store'
+				/>
+			</a>
 		</div>
 	)
 }
