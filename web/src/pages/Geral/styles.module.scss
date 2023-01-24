@@ -13,6 +13,35 @@
 		grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
 	}
 
+	.mediaFinal {
+		gap: 1rem;
+		display: grid;
+		place-items: center;
+
+		.label {
+			gap: 1rem;
+			display: grid;
+			justify-content: center;
+			color: white;
+
+			span {
+				display: grid;
+				place-items: center;
+				place-self: center;
+
+				$inputSize: 100px;
+				width: $inputSize;
+				height: $inputSize;
+				border-radius: calc($inputSize / 4);
+				border: 3px solid darken(colors.$primary, 10);
+				background-color: colors.$white;
+
+				color: colors.$secondary;
+				font-size: 2.2rem;
+			}
+		}
+	}
+
 	.toast__body {
 		background: linear-gradient(
 			to left,

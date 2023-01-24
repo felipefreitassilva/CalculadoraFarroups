@@ -2,8 +2,5 @@
     "scripts": {
         "app": "cd app && yarn && yarn start",
         "web": "cd web && yarn && yarn dev"
-    },
-    "dependencies": {
-        "react-toastify": "^9.1.1"
     }
 }

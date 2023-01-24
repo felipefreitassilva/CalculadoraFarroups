@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
-import { toast } from 'react-toastify'
+import checkValidity from '../../util/checkValidity'
 
 export default function Materia({ nome }: { nome: string }) {
 	const [nota1, setNota1] = useState<number>(0)
@@ -9,9 +9,9 @@ export default function Materia({ nome }: { nome: string }) {
 	const [mediaFinal, setMediaFinal] = useState<number>(0)
 
 	useEffect(() => {
-		checkInvalid(nota1, setNota1)
-		checkInvalid(nota2, setNota2)
-		checkInvalid(nota3, setNota3)
+		checkValidity(nota1, setNota1)
+		checkValidity(nota2, setNota2)
+		checkValidity(nota3, setNota3)
 		setMediaFinal((nota1 + 2 * nota2 + 3 * nota3) / 6)
 	}, [nota1, nota2, nota3])
 
@@ -70,11 +70,4 @@ export default function Materia({ nome }: { nome: string }) {
 			</div>
 		</div>
 	)
-
-	function checkInvalid(nota: number, setNota: (nota: number) => void) {
-		if (nota < 0 || nota > 10) {
-			setNota(0)
-			toast.warn('Favor digite apenas valores entre 0 e 10')
-		}
-	}
 }
