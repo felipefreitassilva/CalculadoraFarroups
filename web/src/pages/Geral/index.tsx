@@ -1,86 +1,81 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import styles from './styles.module.scss'
 import Title from '../../components/Title'
 import Voltar from '../../components/Voltar'
-import { IMateria } from '../../types/Materias'
-import styles from './styles.module.scss'
+import {
+	materias9ano,
+	materias1ano,
+	materias2ano,
+	materias3ano
+} from '../../util/materias'
+import Materia from '../../components/Materia'
+import Button from '../../components/Button'
 
 export default function MediaGeral() {
+	const years = [9, 1, 2, 3]
+	const [anoDesejado, setAnoDesejado] = useState<number>(2)
+	const [materias, setMaterias] = useState<string[]>([
+		'Escolha um ano para calcular suas médias'
+	])
+
+	useEffect(() => {
+		switch (anoDesejado) {
+			case 9:
+				setMaterias(materias9ano)
+				break
+
+			case 1:
+				setMaterias(materias1ano)
+				break
+
+			case 2:
+				setMaterias(materias2ano)
+				break
+
+			case 3:
+				setMaterias(materias3ano)
+				break
+
+			default:
+				break
+		}
+	}, [anoDesejado])
+
 	return (
-		<div className={`container ${styles.container}`}>
+		<main className={`container ${styles.container}`}>
 			<Title title='Média Geral' />
-			<Materia
-				nome='Português'
-				nota1={0}
-				setNota1={() => {}}
-				nota2={0}
-				setNota2={() => {}}
-				nota3={0}
-				setNota3={() => {}}
-			/>
-			<Voltar />
-		</div>
-	)
-
-	function Materia(props: IMateria) {
-		const { nome, nota1, setNota1, nota2, setNota2, nota3, setNota3 } =
-			props
-		const mediaFinal = (nota1 + 2 * nota2 + 3 * nota3) / 6
-
-		return (
-			<div style={{ alignItems: 'center', paddingTop: 30 }}>
-				<h2 className={styles.materia}>{nome}</h2>
-				<div className={styles.inputWrapper}>
-					<div className={styles.input}>
-						<h3 className={styles.label}>Nota do 1º tri: </h3>
-						<input
-							type='number'
-							className={styles.textInput}
-							maxLength={4}
-							value={nota1}
-							onChange={(e) => {
-								setNota1(
-									parseFloat(e.target.value.replace(',', '.'))
-								)
-							}}
-						/>
-					</div>
-					<div className={styles.input}>
-						<h3 className={styles.label}>Nota do 2º tri: </h3>
-						<input
-							type='number'
-							className={styles.textInput}
-							maxLength={4}
-							value={nota2}
-							onChange={(e) => {
-								setNota2(
-									parseFloat(e.target.value.replace(',', '.'))
-								)
-							}}
-						/>
-					</div>
-					<div className={styles.input}>
-						<h3 className={styles.label}>Nota do 3º tri: </h3>
-						<input
-							type='number'
-							className={styles.textInput}
-							maxLength={4}
-							value={nota3}
-							onChange={(e) => {
-								setNota3(
-									parseFloat(e.target.value.replace(',', '.'))
-								)
-							}}
-						/>
-					</div>
-				</div>
-				<div className={styles.results}>
-					<div className={styles.wrapperNotaFinal}>
-						<h2 className={styles.notaFinal}>
-							{mediaFinal.toFixed(2)}
-						</h2>
-					</div>
-				</div>
+			<div className={styles.buttons}>
+				{years.map((year) => (
+					<Button
+						value={year}
+						active={year === anoDesejado}
+						onClick={() => setAnoDesejado(year)}
+						text='º'
+					/>
+				))}
 			</div>
-		)
-	}
+			<div className={styles.materias}>
+				{materias.map((materia) => {
+					return (
+						<Materia
+							key={materia}
+							nome={materia}
+						/>
+					)
+				})}
+			</div>
+			<Voltar />
+			<ToastContainer
+				position='top-right'
+				autoClose={3000}
+				limit={3}
+				newestOnTop
+				hideProgressBar={false}
+				pauseOnFocusLoss={true}
+				progressClassName={styles.toast__body}
+			/>
+		</main>
+	)
 }

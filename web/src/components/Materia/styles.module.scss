@@ -1,0 +1,71 @@
+@use '../../styles/colors';
+
+.materiaWrapper {
+	gap: 1.5rem;
+	display: grid;
+	justify-items: center;
+
+	padding: 1.4rem 0.6rem;
+
+	$dark: darken(colors.$secondary, 20);
+	color: $dark;
+	border-radius: 0.8rem;
+	box-shadow: 4px 4px 8px $dark;
+	background-color: colors.$white;
+
+	.mediaFinal {
+		gap: 0.2rem;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		span {
+			padding: 0.1rem 0.7rem;
+			border-radius: 0.4rem;
+			border: 1.5px solid darken(colors.$primary, 5);
+
+			color: colors.$secondary;
+			font-size: 1.4rem;
+		}
+	}
+
+	.inputs {
+		$gap: 0.8rem;
+		gap: $gap;
+		display: grid;
+
+		label {
+			gap: $gap;
+			display: flex;
+			align-items: center;
+		}
+
+		input {
+			$inputSize: 50px;
+			width: $inputSize;
+			height: $inputSize;
+			border-radius: calc($inputSize / 4);
+			outline: 0;
+			border: 2px solid darken(colors.$primary, 10);
+
+			color: colors.$secondary;
+			font-size: 1.2rem;
+			text-align: center;
+
+			&:focus {
+				color: darken(colors.$secondary, 20);
+				border-color: darken(colors.$secondary, 20);
+			}
+
+			// Hide Spinner
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			/* Firefox */
+			&[type='number'] {
+				-moz-appearance: textfield;
+			}
+		}
+	}
+}

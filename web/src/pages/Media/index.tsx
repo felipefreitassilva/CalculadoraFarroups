@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import styles from './styles.module.scss'
 import Title from '../../components/Title'
 import Voltar from '../../components/Voltar'
+import Button from '../../components/Button'
 
 export default function Media() {
-	const navigate = useNavigate()
+	const grades = [6, 8, 9]
 
 	const [notaPrimeiroTrimestre, setNotaPrimeiroTrimestre] =
 		useState<number>(0)
@@ -32,9 +33,13 @@ export default function Media() {
 		<main className={`container ${styles.container}`}>
 			<Title title='Com que média você quer passar de ano?' />
 			<div className={styles.buttons}>
-				<Button grade={6} />
-				<Button grade={8} />
-				<Button grade={9} />
+				{grades.map((grade) => (
+					<Button
+						value={grade}
+						active={grade === mediaDesejada}
+						onClick={() => setMediaDesejada(grade)}
+					/>
+				))}
 			</div>
 			<div className={styles.inputs}>
 				<Input
@@ -68,22 +73,6 @@ export default function Media() {
 
 	function valid(grade: number) {
 		return grade < 0 || grade > 10
-	}
-
-	function Button({ grade }: { grade: number }) {
-		let active = {}
-		if (grade === mediaDesejada) active = styles.active
-
-		return (
-			<button
-				className={`${styles.button} ${active}`}
-				onClick={() => {
-					setMediaDesejada(grade)
-				}}
-			>
-				{grade}
-			</button>
-		)
 	}
 
 	function Input({

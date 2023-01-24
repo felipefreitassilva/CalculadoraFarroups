@@ -1,0 +1,26 @@
+@use '../../styles/colors';
+
+.button {
+	$btnSize: 60px;
+	width: $btnSize;
+	height: $btnSize;
+	border-radius: $btnSize;
+	border: 3px solid darken(colors.$secondary, 10);
+	background-color: colors.$primary;
+
+	font-size: 1.3rem;
+	color: colors.$white;
+
+	&:hover,
+	&.active {
+		cursor: pointer;
+		border-color: darken(colors.$secondary, 20);
+		background-color: lighten(colors.$primary, 2);
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+	&.active {
+		transform: scale(1.2);
+	}
+}
