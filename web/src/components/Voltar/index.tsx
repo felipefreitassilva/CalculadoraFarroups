@@ -7,11 +7,13 @@ export default function Voltar() {
 	return (
 		<button
 			className={styles.button}
-			onClick={() => {
-				navigate(-1)
-			}}
+			onClick={goBack}
 		>
-			<p className={styles.buttonText}>Voltar</p>
+			Voltar
 		</button>
 	)
+
+	function goBack() {
+		return navigate(-1)
+	}
 }

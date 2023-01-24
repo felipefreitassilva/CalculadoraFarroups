@@ -1,11 +1,9 @@
 @use '../../styles/colors';
 
 .title {
-	margin-top: 30px;
-	font-size: 32px;
-	text-align: 'center';
+	font-size: 2rem;
+	text-align: center;
 	color: colors.$white;
 	padding-bottom: 8px;
-	border-bottom-width: 3px;
-	border-bottom-color: colors.$primary;
+	border-bottom: 3px solid colors.$primary;
 }

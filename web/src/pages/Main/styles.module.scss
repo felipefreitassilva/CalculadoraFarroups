@@ -1,47 +1,57 @@
 @use '../../styles/colors';
 
 .container {
-	flex: 1;
-	padding: 20px;
-	background-color: colors.$secondary;
-}
+	.textWelcome {
+		color: colors.$white;
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-align: justify;
 
-.textWelcome {
-	font-size: 16px;
-	text-align: 'justify';
-	padding: 10px 0;
-	color: colors.$white;
-}
+		padding: 1rem 0.25rem;
+	}
 
-.buttons {
-	flex: 1;
-	align-items: 'center';
-}
+	h3 {
+		font-weight: 500;
+		font-size: 2.2rem;
+		text-align: center;
+		color: colors.$white;
+		text-transform: uppercase;
+	}
 
-.button {
-	height: 54px;
-	width: '85%';
-	border-radius: 80px;
-	margin-top: 30px;
-	align-items: 'center';
-	justify-content: 'center';
-	background-color: colors.$primary;
-}
+	#buttons {
+		gap: 1rem;
+		display: grid;
+	}
+	.buttons {
+		gap: 2rem;
+		display: grid;
+		justify-items: center;
 
-.textButton {
-	font-size: 24px;
-	color: colors.$white;
-}
+		.button {
+			padding: 1rem 2rem;
+			border-radius: 2rem;
+			background-color: colors.$primary;
+			border: 3px solid darken(colors.$secondary, 10);
+			width: min(100%, 300px);
 
-.appButton {
-	position: fixed;
-	$imgSize: 200px;
-	$distanceFromCorner: 22px;
-	left: $distanceFromCorner;
-	bottom: $distanceFromCorner;
-	width: $imgSize;
+			font-size: 1.3rem;
+			color: colors.$white;
+			text-align: center;
 
-	img {
-		width: 100%;
+			&:hover {
+				cursor: pointer;
+				border-color: colors.$primary;
+				background-color: lighten(colors.$primary, 2);
+			}
+		}
+	}
+
+	.appButton {
+		position: fixed;
+		$imgSize: 200px;
+		$distanceFromCorner: 22px;
+		left: $distanceFromCorner;
+		bottom: $distanceFromCorner;
+		width: $imgSize;
 	}
 }

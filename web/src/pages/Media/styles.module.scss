@@ -1,0 +1,104 @@
+@use '../../styles/colors';
+
+.container {
+	color: colors.$white;
+
+	.buttons {
+		gap: 1rem;
+		display: flex;
+		justify-content: center;
+
+		.button {
+			$btnSize: 60px;
+			width: $btnSize;
+			height: $btnSize;
+			border-radius: $btnSize;
+			border: 3px solid darken(colors.$secondary, 10);
+			background-color: colors.$primary;
+
+			font-size: 1.3rem;
+			color: colors.$white;
+
+			&:hover,
+			&.active {
+				cursor: pointer;
+				border-color: darken(colors.$secondary, 20);
+				background-color: lighten(colors.$primary, 2);
+			}
+			&:hover {
+				transform: scale(1.1);
+			}
+			&.active {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	.inputs {
+		gap: 4rem;
+		display: flex;
+		justify-content: center;
+
+		.inputWrapper {
+			gap: 1rem;
+			display: grid;
+			justify-items: center;
+
+			input {
+				$inputSize: 90px;
+				width: $inputSize;
+				height: $inputSize;
+				border-radius: $inputSize / 4;
+				outline: 0;
+				border: 3px solid darken(colors.$primary, 10);
+
+				color: colors.$secondary;
+				font-size: 2rem;
+				text-align: center;
+
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+				/* Firefox */
+				&[type='number'] {
+					-moz-appearance: textfield;
+				}
+
+				&:focus {
+					color: darken(colors.$secondary, 20);
+					border-color: darken(colors.$secondary, 20);
+				}
+			}
+		}
+	}
+
+	.outputs {
+		gap: 1rem;
+		display: grid;
+		justify-items: center;
+
+		.label {
+			gap: 1rem;
+			display: grid;
+			justify-content: center;
+
+			span {
+				display: grid;
+				place-items: center;
+				place-self: center;
+
+				$inputSize: 100px;
+				width: $inputSize;
+				height: $inputSize;
+				border-radius: $inputSize / 4;
+				border: 3px solid darken(colors.$primary, 10);
+				background-color: colors.$white;
+
+				color: colors.$secondary;
+				font-size: 2.2rem;
+			}
+		}
+	}
+}

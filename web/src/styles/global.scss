@@ -7,8 +7,22 @@
 }
 
 main {
-	display: flex;
-	flex-direction: column;
 	min-height: 100vh;
 	background-color: colors.$secondary;
+
+	&.container {
+		gap: 3rem;
+		display: flex;
+		flex-direction: column;
+
+		padding: 5rem 2% 1% 2%;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
 }
