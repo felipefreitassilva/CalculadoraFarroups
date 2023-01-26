@@ -23,25 +23,29 @@ export default function MediaGeral() {
 		switch (anoDesejado) {
 			case 9:
 				setMaterias(materias9ano)
+				localStorage.setItem('mediaNonoAno', mediaGeral.toString())
 				break
 
 			case 1:
 				setMaterias(materias1ano)
+				localStorage.setItem('mediaPrimeiroAno', mediaGeral.toString())
 				break
 
 			case 2:
 				setMaterias(materias2ano)
+				localStorage.setItem('mediaSegundoAno', mediaGeral.toString())
 				break
 
 			case 3:
 				setMaterias(materias3ano)
+				localStorage.setItem('mediaTerceiroAno', mediaGeral.toString())
 				break
 
 			default:
 				setMaterias(['Escolha um ano para calcular suas médias'])
 				break
 		}
-	}, [anoDesejado])
+	}, [anoDesejado, mediaGeral])
 
 	useEffect(() => {
 		let timeRemaining: number = 3

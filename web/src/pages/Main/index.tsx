@@ -38,7 +38,7 @@ export default function Main() {
 					<a
 						className={styles.button}
 						onClick={() => {
-							navigate('/prompt')
+							navigate('/gpa')
 						}}
 					>
 						GPA
