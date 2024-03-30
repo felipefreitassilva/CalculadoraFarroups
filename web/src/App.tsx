@@ -5,6 +5,8 @@ import Main from './pages/Main'
 import MediaUnica from './pages/Media'
 import MediaGeral from './pages/Geral'
 import Gpafinal from './pages/GPA'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 
 export default function App() {
 	return (
@@ -29,6 +31,16 @@ export default function App() {
 					key='gpa'
 					path='gpa'
 					element={<Gpafinal />}
+				/>
+				<Route
+					key='privacy'
+					path='privacy'
+					element={<Privacy />}
+				/>
+				<Route
+					key='terms'
+					path='terms'
+					element={<Terms />}
 				/>
 			</Routes>
 		</BrowserRouter>
