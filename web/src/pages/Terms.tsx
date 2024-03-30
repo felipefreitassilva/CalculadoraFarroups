@@ -1,4 +1,4 @@
-export default function Privacy() {
+export default function Terms() {
     const colorGray = { color: 'rgb(68, 68, 68)' }
     return (
         <>

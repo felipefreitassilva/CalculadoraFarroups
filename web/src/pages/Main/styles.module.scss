@@ -54,4 +54,26 @@
 		bottom: $distanceFromCorner;
 		width: $imgSize;
 	}
+
+	.privacyTerms {
+		position: fixed;
+		$distanceFromCorner: 22px;
+		right: $distanceFromCorner;
+		bottom: $distanceFromCorner;
+
+		color: colors.$white;
+		font-size: 0.8rem;
+		text-align: center;
+		padding: 1rem 0.25rem;
+
+		a {
+			text-decoration: none;
+			font-weight: 600;
+
+			&:hover {
+				cursor: pointer;
+				color: colors.$primary;
+			}
+		}
+	}
 }

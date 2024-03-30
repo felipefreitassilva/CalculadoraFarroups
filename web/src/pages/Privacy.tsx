@@ -3,7 +3,7 @@ export default function Privacy() {
     return (
         <>
             <h2><span style={colorGray}>
-                Política Privacidade
+                Política de Privacidade
             </span></h2>
             <p><span style={colorGray}>
                 A sua privacidade é importante para nós. É política do Calculadora Farroups respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://calculadorafarroups.vercel.app/">Calculadora Farroups</a>, e outros sites que possuímos e operamos.

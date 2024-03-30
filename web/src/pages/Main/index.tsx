@@ -55,6 +55,11 @@ export default function Main() {
 					alt='Baixe o App na Play Store'
 				/>
 			</a>
+			<div className={styles.privacyTerms}>
+				<a onClick={() => { navigate('privacy') }}>Política de Privacidade</a>
+				<br />
+				<a onClick={() => { navigate('terms') }}>Termos & Condições</a>
+			</div>
 		</main>
 	)
 }
