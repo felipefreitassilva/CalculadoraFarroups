@@ -16,13 +16,13 @@ export default function Prompt({ navigation, route }) {
 
     let next;
     if (title == "Média 9º ano") {
-        next = "media9ano"
+        next = "Media9ano"
     } else if (title == "Média 1º ano") {
-        next = "media1ano"
+        next = "Media1ano"
     } else if (title == "Média 2º ano") {
-        next = "media2ano"
+        next = "Media2ano"
     } else if (title == "Média 3º ano") {
-        next = "media3ano"
+        next = "Media3ano"
     }
 
     return (

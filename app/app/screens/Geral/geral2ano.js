@@ -6,7 +6,7 @@ import Voltar from '../components/Voltar'
 import colors from '../../config/colors'
 
 
-export default function geral2ano({ navigation }) {
+export default function Geral2ano({ navigation }) {
 
   function Gradeless() {
 

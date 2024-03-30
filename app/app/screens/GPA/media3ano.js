@@ -6,7 +6,7 @@ import Voltar from '../components/Voltar'
 import colors from '../../config/colors'
 
 
-export default function media3ano({ navigation, route }) {
+export default function Media3ano({ navigation, route }) {
 
   const media9ano = route.params.media9ano
   const media1ano = route.params.media1ano
@@ -320,7 +320,7 @@ export default function media3ano({ navigation, route }) {
         />
         <TouchableOpacity
           style={styles.navButton}
-          onPress={() => { navigation.navigate("gpafinal", { media9ano: media9ano, media1ano: media1ano, media2ano: media2ano, media3ano: mediaFinalGeral }) }}
+          onPress={() => { navigation.navigate("Gpafinal", { media9ano: media9ano, media1ano: media1ano, media2ano: media2ano, media3ano: mediaFinalGeral }) }}
         >
           <Text style={styles.buttonText}>Avançar</Text>
         </TouchableOpacity>
@@ -1164,7 +1164,7 @@ export default function media3ano({ navigation, route }) {
         />
         <TouchableOpacity
           style={styles.navButton}
-          onPress={() => { navigation.navigate("gpafinal", { media9ano: media9ano, media1ano: media1ano, media2ano: media2ano, media3ano: mediaFinalGeral }) }}
+          onPress={() => { navigation.navigate("Gpafinal", { media9ano: media9ano, media1ano: media1ano, media2ano: media2ano, media3ano: mediaFinalGeral }) }}
         >
           <Text style={styles.buttonText}>Avançar</Text>
         </TouchableOpacity>

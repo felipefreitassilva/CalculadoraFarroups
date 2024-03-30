@@ -6,7 +6,7 @@ import Voltar from '../components/Voltar'
 import colors from '../../config/colors'
 
 
-export default function media1ano({ navigation, route }) {
+export default function Media1ano({ navigation, route }) {
 
   const media9ano = route.params.media9ano
 

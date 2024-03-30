@@ -10,17 +10,17 @@ import Media8 from './app/screens/Medias/Media8'
 import Media9 from './app/screens/Medias/Media9'
 
 import GPrompt from './app/screens/Geral/Prompt'
-import geral9ano from "./app/screens/Geral/geral9ano"
-import geral1ano from "./app/screens/Geral/geral1ano"
-import geral2ano from "./app/screens/Geral/geral2ano"
-import geral3ano from "./app/screens/Geral/geral3ano"
+import Geral9ano from "./app/screens/Geral/Geral9ano"
+import Geral1ano from "./app/screens/Geral/Geral1ano"
+import Geral2ano from "./app/screens/Geral/Geral2ano"
+import Geral3ano from "./app/screens/Geral/Geral3ano"
 
 import Prompt from "./app/screens/GPA/Prompt"
-import media9ano from "./app/screens/GPA/media9ano"
-import media1ano from "./app/screens/GPA/media1ano"
-import media2ano from "./app/screens/GPA/media2ano"
-import media3ano from "./app/screens/GPA/media3ano"
-import gpafinal from "./app/screens/GPA/gpafinal"
+import Media9ano from "./app/screens/GPA/Media9ano"
+import Media1ano from "./app/screens/GPA/Media1ano"
+import Media2ano from "./app/screens/GPA/Media2ano"
+import Media3ano from "./app/screens/GPA/Media3ano"
+import Gpafinal from "./app/screens/GPA/Gpafinal"
 
 
 export default function App() {
@@ -63,23 +63,23 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="geral9ano"
-          component={geral9ano}
+          name="Geral9ano"
+          component={Geral9ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="geral1ano"
-          component={geral1ano}
+          name="Geral1ano"
+          component={Geral1ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="geral2ano"
-          component={geral2ano}
+          name="Geral2ano"
+          component={Geral2ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="geral3ano"
-          component={geral3ano}
+          name="Geral3ano"
+          component={Geral3ano}
           options={{ headerShown: false }}
         />
 
@@ -89,28 +89,28 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="media9ano"
-          component={media9ano}
+          name="Media9ano"
+          component={Media9ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="media1ano"
-          component={media1ano}
+          name="Media1ano"
+          component={Media1ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="media2ano"
-          component={media2ano}
+          name="Media2ano"
+          component={Media2ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="media3ano"
-          component={media3ano}
+          name="Media3ano"
+          component={Media3ano}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="gpafinal"
-          component={gpafinal}
+          name="Gpafinal"
+          component={Gpafinal}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

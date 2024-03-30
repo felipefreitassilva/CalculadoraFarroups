@@ -6,7 +6,7 @@ import Voltar from '../components/Voltar'
 import colors from '../../config/colors'
 
 
-export default function gpafinal({ navigation, route }) {
+export default function Gpafinal({ navigation, route }) {
 
     const media9ano = route.params.media9ano
     const media1ano = route.params.media1ano

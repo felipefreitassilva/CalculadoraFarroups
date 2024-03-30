@@ -16,22 +16,22 @@ export default function GPrompt({ navigation, route }) {
             <View style={styles.buttons}>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => { navigation.navigate("geral9ano") }}>
+                    onPress={() => { navigation.navigate("Geral9ano") }}>
                     <Text style={styles.textButton}>Média 9º ano</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => { navigation.navigate("geral1ano") }}>
+                    onPress={() => { navigation.navigate("Geral1ano") }}>
                     <Text style={styles.textButton}>Média 1º ano</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => { navigation.navigate("geral2ano") }}>
+                    onPress={() => { navigation.navigate("Geral2ano") }}>
                     <Text style={styles.textButton}>Média 2º ano</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => { navigation.navigate("geral3ano") }}>
+                    onPress={() => { navigation.navigate("Geral3ano") }}>
                     <Text style={styles.textButton}>Média 3º ano</Text>
                 </TouchableOpacity>
             </View>

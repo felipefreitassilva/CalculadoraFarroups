@@ -6,7 +6,7 @@ import Voltar from '../components/Voltar'
 import colors from '../../config/colors'
 
 
-export default function media9ano({ navigation, route }) {
+export default function Media9ano({ navigation, route }) {
 
   const grades = route.params.grade
 
